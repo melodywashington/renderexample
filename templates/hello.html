@@ -14,5 +14,19 @@
 {% if name %}
 <h2>and hello to {{name}}</h2>
 {% endif %}
+
+<form method="POST" action="/">
+    <input type="text" name="name" placeholder="Type your name here" required>
+    <textarea name="message" placeholder="Leave a message"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Guest List</h2>
+<ul>
+  {% for guest in guests %}
+    <li>{{ guest }}: {{ message }}</li>
+  {% endfor %}
+</ul>
+
 </body>
 </html>
