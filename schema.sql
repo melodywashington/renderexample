@@ -1,0 +1,1 @@
+create table guestlist (id SERIAL primary key, name text, message text);
