@@ -27,6 +27,17 @@
     <li>{{ guest }}: {{ message }}</li>
   {% endfor %}
 </ul>-->
+http://127.0.0.1:5000/callback
+{% if session %}
+<h1>SESSION EXISTS</h1>
+<code>
+  <pre>
+    {{session | tojson}}
+  </pre>
+</code>
+{% else %}
+<h1>No SESSION</h1>
+{% endif %}
 <form action="/submit" method="post">
     <input type="text" required name="name" placeholder="name">
     <textarea name="text"></textarea>
